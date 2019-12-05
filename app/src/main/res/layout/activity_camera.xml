@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_bar_height"
+        android:fitsSystemWindows="true"
+        app:contentScrim="?attr/colorPrimary"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        app:toolbarId="@+id/toolbar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/detail_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    <Button
+        android:id="@+id/takePictureButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take a Photo"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/analyzeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Analyze"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/capturedImage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+
+</LinearLayout>
